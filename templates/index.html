@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Checker</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f0f2f5; padding: 40px; text-align: center; }
+        input[type="text"] { width: 60%; padding: 10px; margin: 10px; }
+        input[type="submit"] { padding: 10px 20px; }
+        .result { margin-top: 20px; font-size: 1.2em; color: #333; }
+    </style>
+</head>
+<body>
+    <h1>Sentiment Checker (Telugu Style)</h1>
+    <form method="post">
+        <input type="text" name="user_input" placeholder="Type your mood or message..." required>
+        <br>
+        <input type="submit" value="Check Sentiment">
+    </form>
+    {% if result %}
+        <div class="result"><strong>Detected Sentiment:</strong> {{ result }}</div>
+    {% endif %}
+</body>
+</html>
